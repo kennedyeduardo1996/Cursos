@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title> 
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			function inicial() {
+                alert("Página carregada com sucesso")
+            }
+            window.onload = inicial;
+
+            $(document).ready(function(e){
+                alert("deu certo");
+            });
+            /* ou */
+            $(function(e){
+               alert("ok"); 
+            });
+		</script>
+    </head>
+
+    <body>
+	  
+    </body>
+</html>

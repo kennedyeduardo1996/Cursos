@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+        function setDoisDigitos(tempo){
+        	if (tempo < 10) {
+        		return "0" + tempo ;
+        	}else{
+        		return tempo;
+        	}
+        }
+
+        var agora = new Date();
+        var horario = setDoisDigitos(agora.getHours()) + ":" + setDoisDigitos(agora.getMinutes()) + ":" + setDoisDigitos(agora.getSeconds());
+
+        var aniversario = new Date(1996,2,1,21,30,15); 
+
+        console.log(horario);
+
+
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

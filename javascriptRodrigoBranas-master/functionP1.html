@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>#7 - Function Parte 1 Rodrigo Branas</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		//Function Declaration: A função é carregada antes do código ser interpretado 
+		soma(2,2); //funciona normal
+
+		function soma(a,b){
+			return a + b;
+		}
+
+		//Function Expression: A função é carregada durante a interpretação do código
+		//multiplica(2,2); multiplica is not defined(não foi definada ainda)
+
+		var multiplica = function(a,b){
+			return a * b;
+		}
+
+		console.log(multiplica(2,5));
+
+
+
+
+
+
+
+
+
+
+
+		/* ****************** */
+		//invocando uma função como parametro
+		var produto = {nome:"Sapato", preco:150};
+
+		function calculaImposto(valor){
+			return valor * 0.1;
+		}
+
+		function valorTotal(produto, calculaImposto){
+			return produto.preco + calculaImposto(produto.preco);
+		}
+
+		console.log(valorTotal(produto,calculaImposto));
+
+
+
+
+
+
+
+
+
+		/* **************************** */
+		//invocando função dentro de função
+
+		var helloWorld = function(){
+			return function(){
+				return "hello World!";
+			};
+		};
+
+		console.log(helloWorld()());
+
+
+
+
+
+
+
+
+
+
+		/* ******************************** */
+		//function atravez de objeto
+		var pessoas = {
+			nomes: "Kennedy e Bruccy",
+			idades: 39,
+			getIdades: function(){
+				return this.idades;
+			}
+		};
+		console.log(pessoas.getIdades());
+
+		// ou
+			var getIdade = function(extra){
+				console.log(arguments);
+				return this.idade + extra;
+			};
+
+			var pessoa = {
+			nome: "Kennedy",
+			idade: 22,
+			getIdade: getIdade
+		};
+
+		console.log(pessoa.getIdade(0));
+		console.log(getIdade.call(pessoa,8, 4, 2));
+		console.log(getIdade.apply(pessoa,[10,5,3]));
+		// basicamente são iguais as 3 linhas a difernça é como se passa os paramentos
+
+
+
+
+
+
+
+/* ************* FABRICA VS CONTRUTORA *************** */
+
+
+		//função fabrica
+		var criarPessoa = function(nome, idade){
+			return {
+				nome: nome,
+				idade: idade
+			}
+		};
+
+		console.log(criarPessoa("Pedro", 20));
+		console.log(criarPessoa("Maria", 30));
+			
+
+
+
+
+
+		//função contrutora
+		var Pessoa = function(nome, idade){
+			this.nome = nome;
+			this.idade = idade;
+		};
+
+		console.log(new Pessoa("Bruno",18));
+
+		var kennedy = {};
+		Pessoa.call(kennedy, "Kennedy", 22);
+		console.log(kennedy);
+
+		var bruccy = {};
+		Pessoa.call(bruccy, "Bruccy", 17);
+		console.log(bruccy);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

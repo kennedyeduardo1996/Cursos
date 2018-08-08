@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <!-- If you delete this meta tag World War Z will become a reality -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation 5</title>
+
+  <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
+  <link rel="stylesheet" href="foundation.min.css">
+
+  <!-- If you are using the gem version, you need this only -->
+ <style type="text/css">
+  .row{
+    background-color: red;
+  }
+  .columns{
+    border: 1px solid green;
+  }
+  .small-2, .large-4{
+    border:1px solid blue;
+  }
+  @media only screen { } /* Define mobile styles */
+
+  @media only screen and (max-width: 640px) {
+  .row{
+    background-color: green;
+  }
+    } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+  @media only screen and (min-width: 641px) { } /* min-width 641px, medium screens */
+
+  @media only screen and (min-width: 641px) and (max-width: 1024px) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+
+  @media only screen and (min-width: 1025px) { } /* min-width 1025px, large screens */
+
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+
+ </style>
+
+
+
+</head>
+<body>
+  <div class="row">
+    <div class="small-2 large-4 columns">...</div>
+    <div class="small-4 large-4 columns">...</div>
+    <div class="small-6 large-4 columns">...</div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">...</div>
+    <div class="large-6 columns">...</div>
+    <div class="large-3 columns">...</div>
+  </div>
+  <div class="row">
+    <div class="small-6 large-2 columns">...</div>
+    <div class="small-6 large-8 columns">...</div>
+    <div class="small-12 large-2 columns">...</div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">...</div>
+    <div class="small-9 columns">...</div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">...</div>
+    <div class="large-8 columns">...</div>
+  </div>
+  <div class="row">
+    <div class="small-6 large-5 columns">...</div>
+    <div class="small-6 large-7 columns">...</div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">...</div>
+    <div class="large-6 columns">...</div>
+  </div>
+
+
+
+
+  <script src="jquery-3.3.1.min.js"></script>
+ 
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
